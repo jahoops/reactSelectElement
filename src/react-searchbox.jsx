@@ -20,3 +20,5 @@ var Searchbox = (
     <SearchboxList data1="A One" data2="A Two" />
   </div>
 );
+
+Searchbox.data = [];
