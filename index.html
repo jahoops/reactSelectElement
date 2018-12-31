@@ -22,11 +22,27 @@
           <div class="col-1 bg-light"></div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.7.0/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.7.0/umd/react-dom.production.min.js"></script>
-    <script src="./dist/react-searchbox.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script> 
+    <script src="./dist/MyLibary.sb.js" type="text/javascript"></script>
+   
     <script>
-      ReactDOM.render(Searchbox,document.querySelector('#searchbox'));
+      var options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' }
+      ];
+      var options2 = [
+        { value: 'chocolate2', label: 'Chocolate2' },
+        { value: 'strawberry2', label: 'Strawberry2' },
+        { value: 'vanilla2', label: 'Vanilla2' }
+      ];
+      console.log(MyLibrary.sb);
+      var Searchbox = React.cloneElement(CrepsLibrary.default,{ options: options });
+      ReactDOM.render(Searchbox, document.querySelector('#searchbox'));
+      Searchbox = React.cloneElement(CrepsLibrary.default,{ options: options2 });
+      ReactDOM.render(Searchbox, document.querySelector('#searchbox'));
     </script>
   </body>
 </html>
